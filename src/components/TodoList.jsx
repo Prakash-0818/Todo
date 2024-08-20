@@ -8,12 +8,9 @@ const TodoList = () => {
 
   useEffect(()=>{
     const storedTodo = localStorage.getItem('Todo');
-    console.log("Storde data", storedTodo);
     try{
         const parsedData = JSON.parse(storedTodo);
-        console.log("parsedData",parsedData);
         setTodo(parsedData);
-        console.log(Todo);
     }catch(error){
         console.log("Error parsing", error);
     }
